@@ -1,0 +1,49 @@
+JMP start
+
+aprovado:  DB "Aprovado"
+           DB 0
+
+reprovado: DB "Reprovado"
+           DB 0
+start:
+.notas:
+    MOV A, 6
+    MOV B, 5
+  
+    ADD A, B
+    MOV B, 2
+    DIV B
+    MOV B, 6
+    SUB A, B
+  
+   JC .reprovado
+
+.resultados:
+.aprovado:
+    MOV A, aprovado
+    MOV D, 232
+    CALL print
+    HLT
+
+.reprovado:
+    MOV A, reprovado
+    MOV D, 232
+    CALL print
+    JMP .notas
+
+print:
+    PUSH A
+    PUSH B
+    MOV B, 0
+
+.loop:
+    MOV A, [C]
+    MOV [D], A
+    INC C
+    INC D
+    CMP B, [C]
+    JNZ .loop
+
+    POP B
+    POP A
+    RET
