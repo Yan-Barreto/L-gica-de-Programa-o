@@ -1,0 +1,143 @@
+// Lista de LPA \\
+
+
+
+// QUESTÃO 1 \\
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double valorA, valorB, valorC, total;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir os valores de A, B, C :");
+		valorA = teclado.nextDouble();
+		valorB = teclado.nextDouble();
+		valorC = teclado.nextDouble();
+		total = valorA + valorB;
+		if (total < valorC) {
+			System.out.println("O valor de " + total + " é menor que " + valorC );
+		}else { 
+			if (total == valorC) {
+			System.out.println("O valor de " + total + " é igual que " + valorC);
+		}else {
+			System.out.println("O valor de " + total + " é maior que " + valorC);}
+		}
+		
+	}
+
+}
+
+
+// QUESTÃO 2 \\
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double idade;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir sua idade");
+		idade = teclado.nextDouble();
+		if (idade < 18) {
+			System.out.println("Você ainda é menor de idade");
+		}else { 
+			if (idade >= 18) {
+			System.out.println("Você já é maior de idade");}
+		}
+		
+	}
+
+}
+
+// QUESTÃO 3 \\
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double nmr;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir seu número");
+		nmr = teclado.nextDouble();
+		if (nmr % 2 ==0) {
+			System.out.println("Seu número é par");
+		}else { 
+			System.out.println("Seu número é impar");}
+		}
+		
+	}
+
+// QUESTÃO 4 \\ 
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double nmr, total1, total2 = 0;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir seu número");
+		nmr = teclado.nextDouble();
+		if (nmr >= 0) {
+			total1 = nmr * 2;
+			System.out.printf("O dobro de seu número é %.1f ", total1 );
+		}else{ 
+			if(nmr < 0)
+				total2 = nmr * 3;
+			System.out.printf("O triplo de seu número é %.1f ", total2 );}
+		}
+		
+	}
+
+// QUESTÃO 5 \\
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double nmr, desconto, total;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir o vlaor da sua compra");
+		nmr = teclado.nextDouble();
+		if (nmr > 500) {
+			desconto = nmr * 0.10;
+			total = nmr - desconto;
+			System.out.println("O seu desconto foi de " + desconto + " e o valor a ser pago é de " + total );
+		}else{ 
+			System.out.printf("Você não tem direito a desconto" );}
+		}
+		
+	}
+
+// QUESTÃO 6 \\
+package exercicio;
+
+import java.util.Scanner;
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		double nmr, total = 0;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Adicione a seguir seu número");
+		nmr = teclado.nextDouble();
+		if (nmr % 2 ==0) {
+		total = nmr + 5;
+		System.out.println("Seu novo número é " + total);
+		}else 
+		total = nmr + 8;
+		{
+			System.out.println("Seu novo número é " + total);}
+		}
+	
+	}
