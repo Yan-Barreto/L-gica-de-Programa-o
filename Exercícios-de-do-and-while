@@ -1,0 +1,158 @@
+QUESTÃO 1
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class java4 {
+
+	public static void main(String[] args) {
+		float numero;
+		Scanner tc = new Scanner(System.in);
+		System.out.println("Digite o seu número ");
+		numero = tc.nextFloat(); 
+		do { numero++; 
+		System. out .println("Mostre " + numero); }
+		while (numero < 50);
+
+	}
+
+}
+
+
+QUESTÃO 1.1
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class java4 {
+
+	public static void main(String[] args) {
+		float numero;
+		Scanner tc = new Scanner(System.in);
+		System.out.println("Digite o seu número ");
+		numero = tc.nextFloat(); 
+		do { numero--; 
+		System. out .println("Mostre " + numero); }
+		while (numero > 0);
+
+	}
+
+}
+
+
+QUESTÃO 1.2
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class java4 {
+
+	public static void main(String[] args) {
+		float numero;
+		Scanner tc = new Scanner(System.in);
+		System.out.println("Digite o seu número ");
+		numero = tc.nextFloat(); 
+		do { numero--; 
+		System. out .println("Mostre " + numero); }
+		while (numero > 0);
+
+	}
+
+}
+
+
+QUESTÃO 1.3  
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class java4 {
+
+	public static void main(String[] args) {
+		float numero;
+		Scanner tc = new Scanner(System.in);
+		System.out.println("Digite o seu número ");
+		numero = tc.nextFloat(); 
+		do { numero = numero-2; 
+		System. out .println("Mostre " + numero); }
+		while (numero > 0);
+
+	}
+
+}
+
+
+		QUESTÃO 2
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class java4 {
+
+	public static void main(String[] args) {
+		float numero;
+		Scanner tc = new Scanner(System.in);
+		System.out.println("Digite um número de 0 a 100 ");
+		numero = tc.nextFloat();
+		
+		while (numero < 0 || numero > 100 ) {
+			System.out.println("Número inválido, digite outro número");
+			numero = tc.nextFloat();
+		}
+		
+		System.out.println("Número válido");
+	}
+	
+}
+
+
+QUESTÃO 3
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+	public static void main(String[] args) {
+		 Scanner tc = new Scanner(System.in);
+
+	        int numero;
+	        int contadorPares = 0;
+	        int somaPares = 0;
+	        int somaImpares = 0;
+	        int contadorImpares = 0;
+	        double mediaImpares;
+
+	        while (contadorPares < 10) {
+	            System.out.println("Digite um número:");
+	            numero = tc.nextInt();
+
+	            if (numero % 2 == 0) {
+	                contadorPares++;
+	                somaPares += numero;
+	            } else {
+	                somaImpares += numero;
+	                contadorImpares++;
+	            }
+	        }
+
+	        // cálculo da média dos ímpares \\
+	        if (contadorImpares > 0) {
+	            mediaImpares = (double) somaImpares / contadorImpares;
+	        } else {
+	            mediaImpares = 0;
+	        }
+
+	        System.out.println("Soma dos números pares: " + somaPares);
+	        System.out.println("Média dos números ímpares: " + mediaImpares);
+
+	        tc.close();
+	    }
+	}
+
