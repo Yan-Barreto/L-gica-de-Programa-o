@@ -1,0 +1,76 @@
+QUESTÃO 1
+
+package EXEMPLO;
+
+import java.util.Scanner;
+
+public class exemplo2 {
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int i1, i;
+
+        System.out.println("Digite o numero desejado");
+        i1 = tc.nextInt();
+
+        for (i = 0; i <= i1; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+QUESTÃO 2
+
+package EXEMPLO;
+
+import java.util.Scanner;
+
+public class EXEMPLO1 {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int numero = 0, divisor;
+
+        System.out.println("Digite o número desejado");
+        numero = tc.nextInt();
+
+        for (divisor = 1; divisor <= numero; divisor++) {
+            if (numero % divisor == 0) {
+                System.out.println(divisor);
+            }
+        }
+    }
+}
+
+
+QUESTÃO 3
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int num1, num2, maior, menor;
+        
+        System.out.println("Digite seus números de interesse: ");
+        num1 = tc.nextInt();
+        num2 = tc.nextInt();
+        
+        if(num1>num2) {
+        	 maior = num1;
+        	 menor = num2;
+        }else {
+        	if(num1<num2);{
+        		menor = num1;
+        		maior = num2;
+        	}
+        } for(menor=menor; menor<maior ; menor++) {
+        	System.out.println(menor);
+        }
+        
+        
+  }
+}
