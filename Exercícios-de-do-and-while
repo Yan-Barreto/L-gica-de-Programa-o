@@ -120,39 +120,32 @@ import java.util.Scanner;
 public class cfbxdf {
 
 	public static void main(String[] args) {
-		 Scanner tc = new Scanner(System.in);
+		 try (Scanner tc = new Scanner(System.in)) {
+			int num, contPar = 0, somaPar = 0, somaImpar = 1, contImpar=0;
+			  double media=0;
+			   
+			   do {
+				  System.out.println(" Digite a seguir os números: ");
+				   num = tc.nextInt();
+				   
+				   if (num %2 == 0) {
+					   somaPar = somaPar + num;
+					   contPar++;
+				 
+				   } else {
+					   
+					   somaImpar = somaImpar + num;
+					   contImpar++;
+					   media = somaImpar / contImpar;
+				   }
 
-	        int numero;
-	        int contadorPares = 0;
-	        int somaPares = 0;
-	        int somaImpares = 0;
-	        int contadorImpares = 0;
-	        double mediaImpares;
-
-	        while (contadorPares < 10) {
-	            System.out.println("Digite um número:");
-	            numero = tc.nextInt();
-
-	            if (numero % 2 == 0) {
-	                contadorPares++;
-	                somaPares += numero;
-	            } else {
-	                somaImpares += numero;
-	                contadorImpares++;
-	            }
-	        }
-
-	        // cálculo da média dos ímpares \\
-	        if (contadorImpares > 0) {
-	            mediaImpares = (double) somaImpares / contadorImpares;
-	        } else {
-	            mediaImpares = 0;
-	        }
-
-	        System.out.println("Soma dos números pares: " + somaPares);
-	        System.out.println("Média dos números ímpares: " + mediaImpares);
-
-	        tc.close();
+				   
+			       } while (contPar <= 9);
+			   
+			        
+			        
+			        
+			       System.out.println(" A soma dos números pares é igual a : " + somaPar + ", e a média dos números impares é igual a: " + media);
+		 }
 	    }
 	}
-
