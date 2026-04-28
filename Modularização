@@ -1,0 +1,46 @@
+Scanner tc = new Scanner(System.in);
+        int num1, num2;
+        char operacao;
+        System.out.println("Digite a seguir os números que deseja fazer as operações: ");
+         num1= tc.nextInt();
+         num2 = tc.nextInt();
+         System.out.println("Digite a operação desejada (+ , - , * , /)");
+         operacao = tc.next().charAt(0);
+         if (operacao == '+') {
+        	 soma(num1, num2);
+         } else {
+        	 if (operacao == '-') {
+        		 sub( num1, num2);
+        	 }else {
+        		 if (operacao == '*') {
+        			 mul(num1, num2);
+        		 }else {
+        			 div(num1,num2);
+        		 }
+        	 }
+         }
+         
+    }
+    public static void soma (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 + num2;
+    	System.out.println(resultado);
+    }
+    public static void sub (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 - num2;
+    	System.out.println(resultado);
+    }
+    public static void mul (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 * num2;
+    	System.out.println(resultado);
+    }
+    public static void div (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 / num2;
+    	System.out.println(resultado);
+    }
+    
+    }
+    
