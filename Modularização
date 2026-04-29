@@ -107,4 +107,69 @@ public class EXEMPLO1 {
     
     
 }
+
+
+-EXEMPLO 3-
+
+package EXEMPLO;
+
+import java.util.Scanner;
+
+public class EXEMPLO1 {
+
+	public static void main(String[] args) {
+		Scanner tc = new Scanner(System.in);
+        int num1, num2, x = 0;
+        char operacao;
+        
+      System.out.println("Digite a seguir os números que deseja fazer as operações: ");
+         num1= tc.nextInt();
+         num2 = tc.nextInt();
+        while (true) {   System.out.println("Digite a operação desejada (+ , - , * , /)");
+         operacao = tc.next().charAt(0);
+         if (operacao == '+') {
+        	x = soma(num1, num2);
+        	System.out.println(x);
+         } else {
+        	 if (operacao == '-') {
+        		x = sub( num1, num2);
+        		System.out.println(x);
+        	 }else {
+        		 if (operacao == '*') {
+        			x = mul(num1, num2);
+        			System.out.println(x);
+        		 }else {
+        			 if (operacao == '/') {
+        			 x = div(num1,num2);
+        			 System.out.println(x);
+        			 }
+        		 }
+        	 }
+         }
+       }
+    }
+    public static int soma (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 + num2;
+    	return resultado;
+    }
+    public static int sub (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 - num2;
+    	return resultado;
+    }
+    public static int mul (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 * num2;
+    	return resultado;
+    }
+    public static int div (int num1, int num2) {
+    	int resultado;
+    	resultado = num1 / num2;
+    	return resultado;
+    }
+    
+    
+    
+}
 	
