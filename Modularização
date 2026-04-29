@@ -173,3 +173,61 @@ public class EXEMPLO1 {
     
 }
 	
+
+
+-EXEMPLO 4-
+
+package EXEMPLO;
+
+import java.util.Scanner;
+
+public class EXEMPLO1 {
+	
+	
+//YAN BARRETO GUEDES VIERA\\
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner tc = new Scanner(System.in);
+        int num1;
+		String x;
+        
+      System.out.println("Digite a seguir sua idade:  ");
+         num1= tc.nextInt();
+         if (num1 <= 15) {
+        	x = c1 (num1);
+        	System.out.println(x);
+         } else {
+        	 if (num1 <= 17 || num1 >= 65) {
+        		x = c2( num1);
+        		System.out.println(x);
+        	 }else {
+        		 if (num1 == 18  || num1 <= 64) {
+        			x = c3(num1);
+        			System.out.println(x);
+        		
+        		 }
+        	 }
+         }
+       }
+    
+    public static String c1 (int num1) {
+    	String resultado;
+    	resultado = ("sem permissão de voto");
+    	return resultado;
+    }
+    public static String c2 (int num1) {
+    	String resultado;
+    	resultado = ("voto facultativo");
+    	return resultado;
+    }
+    public static String c3 (int num1) {
+    	String resultado;
+    	resultado = ("voto obrigatório");
+    	return resultado;
+    }
+   
+    
+}
+	
