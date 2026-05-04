@@ -47,6 +47,10 @@ Scanner tc = new Scanner(System.in);
     
     }
 
+
+
+
+
 -EXEMPLO 2-
 
 package EXEMPLO;
@@ -107,6 +111,8 @@ public class EXEMPLO1 {
     
     
 }
+
+
 
 
 -EXEMPLO 3-
@@ -175,6 +181,8 @@ public class EXEMPLO1 {
 	
 
 
+
+
 -EXEMPLO 4-
 
 package EXEMPLO;
@@ -230,4 +238,208 @@ public class EXEMPLO1 {
    
     
 }
-	
+
+
+
+
+-EXEMPLO 5-
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int hora;
+        String nome;
+        System.out.println("Digite a seguir seu nome e a hora do dia que você está digitando (1:00 da tarde = 13:00, e sucessivamente):  ");
+         nome= tc.next();
+         hora = tc.nextInt();
+         exibirSudação(nome, hora);
+        	 }
+        
+    public static void exibirSudação (String nome, int hora) {
+    	 if (hora == 5 || hora <= 12) {
+    		 System.out.println("Bom dia " + nome);
+         } else {
+        	 if (hora == 13 || hora <= 18) {
+        		 System.out.println("Boa tarde " + nome);
+        	 }else {
+        		 if (hora == 19 || hora <= 4) {
+    	System.out.println("Boa noite " + nome);
+    }
+         }
+        	 }
+}
+}
+
+
+
+
+-EXEMPLO 6 -
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int num;
+        System.out.println("Digite a seguir seu número:  ");
+         num = tc.nextInt();
+        ePar(num);
+        	 }
+        
+    public static void ePar (int num) {
+    	 if (num%2 <= 0) {
+    		 System.out.println("O número é par");
+         } else {
+        	System.out.println("O número é impar");
+         }
+        	 }
+}
+
+
+
+
+-EXEMPLO 7-
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        double C;
+        System.out.println("Digite a seguir a temperatura:  ");
+         C = tc.nextDouble();
+         celsiusParaFahrenheit(C);
+        	 }
+        
+    public static void  celsiusParaFahrenheit (double C) {
+    	double F;
+    	F = (C * 1.8)+32;
+    	System.out.println(F + " Fahrenheit's");
+  }
+}
+
+
+
+
+-EXEMPLO 8-
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+       int num1, num2, num3, maior;
+        System.out.println("Digite a seguir seus três números:  ");
+        num1= tc.nextInt();
+        num2= tc.nextInt();
+        num3 = tc.nextInt();
+        maior = encontrarMaior(num1, num2, num3);
+        System.out.println(" o maior número é o: " + maior);
+       
+        	 }
+        
+    public static int encontrarMaior (int num1, int num2, int num3) {
+    	int maior = 0;
+    	if ( num1 > num2 && num1 > num3) {
+    		maior = num1;
+    	} else {
+    		if ( num2 > num1 && num2 > num3) {
+    			maior = num2;
+    		} else {
+    			if ( num3 > num2 && num3 > num1) {
+    				maior = num3;
+    			}
+    		}
+    	}
+    	return maior ;
+  }
+}
+
+
+
+
+-EXEMPLO 9-
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+      double peso, altura,imc;
+	  String cla;
+      System.out.println("Digite a seguir seu peso e sua altura: ");
+      peso = tc.nextDouble();
+      altura = tc.nextDouble();
+    imc = calcularIMC(peso, altura);
+    cla = classificarIMC(imc);
+    System.out.println(cla);
+}
+    public static double calcularIMC(double peso, double altura) {
+    	double IMC;
+    	IMC = peso / (altura * altura);
+    	return IMC;
+    }
+    
+    public static String classificarIMC(double imc) {
+    	String classificação ;
+    	if(imc < 18.5) {
+    		classificação = "abaixo do peso";
+    	} else {
+    		if(imc >= 18.5 && imc <= 24.9) {
+    			classificação = "peso ideal";
+    		} else {
+    			if(imc >= 25 && imc <= 29.9) {
+					classificação = "sobrepeso";
+    			}else {
+    				classificação = "obesidade";
+    			}
+    		}
+    	}
+		return classificação;
+    }
+}
+
+
+
+
+-EXEMPLO 10-
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class cfbxdf {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        int quantidade;
+        char linha;
+        System.out.println("Digite a seguir o caracter e a quantidade de vezes que você quer que ele apareça: ");
+        linha = tc.next().charAt(0);
+        quantidade = tc.nextInt();
+        desenharLinha(quantidade, linha);
+    }
+    
+    public static void desenharLinha(int quantidade , char linha) {
+    	for ( int i = 0 ; i < quantidade ; i++) {
+    		System.out.print(linha);
+    	}
+    }
+}
