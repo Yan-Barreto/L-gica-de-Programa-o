@@ -88,3 +88,125 @@ public class TESTE {
     }
 }
 
+
+
+
+-EXEMPLO 3-
+
+
+public class ListaLPA {
+
+	public static void main(String[] args) {
+		//	Faça uma função que receba 2 vetores com 10 números inteiros cada
+		
+		
+		Scanner tc = new Scanner (System.in);
+		int [] v1;
+		v1 = new int [10];
+		for (int x = 0 ; x< 10; x++) {
+			System.out.println("Adicione valores para o primeiro vetor: ");
+			v1[x]= tc.nextInt();
+		}
+		
+		
+		int [] v2;
+		v2 = new int [10];
+		for (int x = 0 ; x< 10; x++) {
+			System.out.println("Adicione valores para o segundo vetor: ");
+			v2[x]= tc.nextInt();
+		}
+		
+		recebedor(v1, v2);
+		
+		}
+	//gere um terceiro vetor cujos elementos contém a soma dos elementos de mesmo índice dos outros dois vetores
+	public static void recebedor(int[] v1, int[] v2) {
+		int [] v3;
+		v3 = new int[10];
+		for(int i = 0 ; i<10 ; i++) {
+			v3[i] = v1[i] + v2[i];
+			System.out.println( v3[i]);
+		}
+	}
+	}
+
+
+
+-EXEMPLO 4-
+
+
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class variáveis {
+
+	public static void main(String[] args) {
+		
+		Scanner tc = new Scanner ( System.in);
+		
+		//Faça um programa em java modularizado que preencha um vetor de 5 posições com valores inteiros recebidos pelo teclado
+	
+		int[] v1;
+		v1 = new int[5];
+		for( int x=0 ; x<5 ; x++) {
+			System.out.println("Digite a seguir os 5 valores do primeiro vetor:");
+			v1[x]= tc.nextInt();
+		}
+		
+		inverso(v1);
+	}
+       
+	
+	//e, em seguida, mostre os valores na ordem inversa da que foram digitados.
+	public static void inverso( int[]v1) {
+		 for( int x=4 ; x<=4 && x>-1 ; x--) {
+			 System.out.println(v1[x]);
+		 }
+	}
+	
+}
+
+
+
+-EXEMPLO 5-
+
+
+public static void main(String[] args) {
+		
+		Scanner tc = new Scanner ( System.in);
+		
+		//Faça uma função que receba um vetor com 50 números inteiros e um número.
+	
+		int[] v1;
+		int num;
+		v1 = new int[5];
+		for( int x=0 ; x<5 ; x++) {
+			System.out.println("Digite a seguir os 5 valores do primeiro vetor:");
+			v1[x]= tc.nextInt();
+		}
+		
+		    System.out.println("Digite o número de reconhecimento: ");
+		    num = tc.nextInt();
+		
+		int resposta = rec(v1, num);
+		
+		System.out.println("O numero aparece " + resposta + " vezes");
+	}
+       
+	
+	//Ao final a função deve devolver quantas vezes o número recebido aparece no vetor.
+	public static int rec( int[]v1, int num) {
+		int quantidade = 0;
+        for ( int x=4; x<=4 && x>-1 ; x--) {
+		 if(v1[x]==num){	 
+		  do {
+		  quantidade++;
+		} while(quantidade==5 && quantidade < 5);
+	 }		 	
+  }
+		 return quantidade;
+	}
+	
+}
