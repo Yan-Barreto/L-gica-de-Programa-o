@@ -40,3 +40,51 @@ public class EXEMPLO1 {
       
     }
 }
+
+
+-EXEMPLO 2-
+
+
+package exercicio;
+
+import java.util.Scanner;
+
+public class TESTE {
+
+	public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+
+        int[] nums = new int[10];
+
+        preenche(nums, tc);
+
+        int posMaior = posicaoMaior(nums, 10);
+
+        System.out.println("A posição do maior número é: " + posMaior);
+        System.out.println("O maior número é: " + nums[posMaior]);
+
+        tc.close();
+    }
+
+   
+    public static void preenche(int[] v, Scanner tc) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Digite um número:");
+            v[i] = tc.nextInt();
+        }
+    }
+
+  
+    public static int posicaoMaior(int[] v, int tamanho) {
+        int posMaior = 0;
+
+        for (int i = 1; i < tamanho; i++) {
+            if (v[i] > v[posMaior]) {
+                posMaior = i;
+            }
+        }
+
+        return posMaior;
+    }
+}
+
