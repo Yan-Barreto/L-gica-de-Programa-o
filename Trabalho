@@ -1,0 +1,112 @@
+package exercicio;
+
+import java.util.Scanner;
+
+public class variáveis {
+
+	public static void main(String[] args) {
+		
+		Scanner tc = new Scanner ( System.in);
+		
+	//o Um método para sortear a categoria.
+		
+		int dificuldade;
+		int categoria;
+		
+		
+		String[] atual = null;
+		
+		
+		System.out.println("Digite a seguir a dificuldade ( 1 = Fácil,  2 = Médio, 3 = Difícil) e a categoria ( 1 = categoria 1,  2 = categoria 2,  3 = categoria 3) :");
+		dificuldade = tc.nextInt();
+		categoria = tc.nextInt();
+
+		
+		String[] categoria1Facil ;
+		categoria1Facil = new String [5];
+
+		String[] categoria2Facil ;
+		categoria2Facil = new String [5];
+		
+		String[] categoria3Facil ;
+		categoria3Facil = new String [5];
+		
+	
+		
+		String[] categoria1Media ;
+        categoria1Media = new String [5];
+        
+		String[] categoria2Media ;
+		categoria2Media = new String [5];
+		
+		String[] categoria3Media ;
+		categoria3Media = new String [5];		
+	
+		
+		
+		String[] categoria1Dificil ;
+		categoria1Dificil = new String [5];
+		
+		String[] categoria2Dificil ;
+		categoria2Dificil = new String [5];
+
+		String[] categoria3Dificil ;
+		categoria3Dificil = new String [5];
+
+		
+		
+		
+		if(dificuldade == 1 && categoria == 1) {
+		    atual = categoria1Facil;
+		}
+
+		else if(dificuldade == 1 && categoria == 2) {
+		    atual = categoria2Facil;
+		}
+
+		else if(dificuldade == 1 && categoria == 3) {
+		    atual = categoria3Facil;
+		}
+
+		else if(dificuldade == 2 && categoria == 1) {
+		    atual = categoria1Media;
+		}
+
+		else if(dificuldade == 2 && categoria == 2) {
+		    atual = categoria2Media;
+		}
+
+		else if(dificuldade == 2 && categoria == 3) {
+		    atual = categoria3Media;
+		}
+
+		else if(dificuldade == 3 && categoria == 1) {
+		    atual = categoria1Dificil;
+		}
+
+		else if(dificuldade == 3 && categoria == 2) {
+		    atual = categoria2Dificil;
+		}
+
+		else if(dificuldade == 3 && categoria == 3) {
+		    atual = categoria3Dificil;
+		}
+		
+		
+			for (int i = 0 ; i < 5; i++) {
+				
+				if(atual[i] != null) {
+					
+				System.out.println(" A palavra possui " + atual[i].length() + " letras");
+				
+			}		
+			
+	}
+						
+
+	
+		
+	
+	}
+	
+}
