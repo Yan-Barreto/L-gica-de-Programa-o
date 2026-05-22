@@ -1,3 +1,5 @@
+TRABALO1
+
 JMP start
 
 aprovado:  DB "Aprovado"
@@ -47,3 +49,102 @@ print:
     POP B
     POP A
     RET
+
+
+
+
+TRABALHO 2
+
+JMP inicio
+
+; ===== MENSAGENS =====
+
+A1: DB 'A'
+A2: DB 'N'
+A3: DB 'O'
+A4: DB ':'
+
+N1: DB 'N'
+N2: DB 'O'
+N3: DB 'M'
+N4: DB 'E'
+N5: DB ':'
+
+; ===== VARIAVEIS =====
+
+anonasc: DB 0
+nome: DB 0
+idade: DB 0
+
+anoatual: DB 25
+
+inicio:
+
+; ===== ESCREVE ANO =====
+
+MOV A, [A1]
+MOV [232], A
+
+MOV A, [A2]
+MOV [232], A
+
+MOV A, [A3]
+MOV [232], A
+
+MOV A, [A4]
+MOV [232], A
+
+; ===== LE ANO =====
+
+MOV A, [231]
+
+MOV [anonasc], A
+
+; ===== ESCREVE NOME =====
+
+MOV A, [N1]
+MOV [232], A
+
+MOV A, [N2]
+MOV [232], A
+
+MOV A, [N3]
+MOV [232], A
+
+MOV A, [N4]
+MOV [232], A
+
+MOV A, [N5]
+MOV [232], A
+
+; ===== LE NOME =====
+
+MOV A, [231]
+
+MOV [nome], A
+
+; ===== CALCULO =====
+
+MOV A, [anoatual]
+
+SUB A, [anonasc]
+
+MOV [idade], A
+
+; ===== RESULTADO =====
+
+MOV A, [nome]
+
+MOV [232], A
+
+MOV A, ' '
+
+MOV [232], A
+
+MOV A, [idade]
+
+ADD A, '0'
+
+MOV [232], A
+
+HLT
